@@ -16,7 +16,7 @@ A modern, responsive, and dynamic electronics e-commerce website built with HTML
 ## Tech Stack
 
 - HTML5
-- CSS3 (with Bootstrap 5 and custom styles)
+- CSS3 (customs styles)
 - JavaScript  
 - [Fake Store API - Electronics](https://fakestoreapi.com/products/category/electronics)
 
