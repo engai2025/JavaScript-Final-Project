@@ -42,7 +42,7 @@ A modern, responsive, and dynamic electronics e-commerce website built with HTML
 GitHub: [@engai2025](https://github.com/engai2025) 
 ## Customization
 
-- To use your own products, modify the API endpoint or replace the fetch logic in `script.js`.
+- To use your own products, modify the API endpoint or replace the fetch logic in `Main.js`.
 - All styling can be adjusted in `styles.css`.
 
 ## Project Structure & Best Practices
