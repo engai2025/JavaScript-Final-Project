@@ -11,7 +11,7 @@ A modern, responsive, and dynamic electronics e-commerce website built with HTML
 - **Contact form** with validation and user feedback
 - **Responsive design** for all devices
 - **SPA navigation** with sticky navbar and active link highlighting
-- **Clean, modern UI** using Bootstrap and custom CSS
+ 
 
 ## Tech Stack
 
@@ -25,7 +25,7 @@ A modern, responsive, and dynamic electronics e-commerce website built with HTML
 ```
 /
 ├── index.html        # Main  entry point
-├── styles.css        # Custom and Bootstrap-based styles
+├── styles.css        # Custom styles
 ├── script.js         # All dynamic JS logic (SPA, API, cart, etc.)
 ├── README.md         # Project documentation
  
