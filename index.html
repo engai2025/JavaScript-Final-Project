@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
@@ -31,21 +31,72 @@
     <section id="home" class="section-padding">
       <div class="container text-center">
         <h1>Welcome to ElectroStore</h1>
-        <p>Your one-stop shop for the latest electronics and gadgets. Discover, shop, and enjoy!</p>
-        <a href="#products" class="btn btn-primary btn-lg mt-3">Shop Now !</a>
+        <p class="hero-subtitle">Your one-stop shop for the latest electronics and gadgets. Discover, shop, and enjoy cutting-edge technology!</p>
+        <div class="hero-features">
+          <div class="row g-4 mt-5">
+            <div class="col-md-4">
+              <div class="feature-card">
+                <i class="fas fa-shipping-fast"></i>
+                <h4>Fast Shipping</h4>
+                <p>Free shipping on orders over $50</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h4>Secure Payment</h4>
+                <p>100% secure payment processing</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="feature-card">
+                <i class="fas fa-headset"></i>
+                <h4>24/7 Support</h4>
+                <p>Round-the-clock customer support</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#products" class="btn btn-primary btn-lg mt-5">Shop Now</a>
       </div>
     </section>
 
     <section id="about" class="section-padding">
       <div class="container">
-        <div class="row align-items-center g-5">
+        <h2 class="section-heading">About ElectroStore</h2>
+        <div class="row align-items-center g-5 mb-5">
           <div class="col-lg-6">
             <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?q=80&w=1501&auto=format&fit=crop&ixlib=rb-4.0.3" alt="About ElectroStore" class="img-fluid rounded shadow" />
           </div>
           <div class="col-lg-6">
-            <h2 class="section-heading text-start">About ElectroStore</h2>
-            <p>ElectroStore is dedicated to bringing you the latest and greatest in electronics. We believe in quality, affordability, and exceptional customer service. Our curated selection features top brands and innovative gadgets for everyone.</p>
-            <a href="#contact" class="btn btn-primary mt-3">Contact Us</a>
+            <h3>Our Story</h3>
+            <p>ElectroStore was founded in 2020 with a passion for technology and a mission to bring the latest electronic innovations directly to you. We believe in quality, affordability, and exceptional customer service.</p>
+            <p>Our curated selection features top brands and cutting-edge gadgets, ensuring you always have access to the best tech on the market. We're more than just a retailer; we're your trusted partner in the world of electronics.</p>
+            <a href="#contact" class="btn btn-primary mt-3" id="btn1">Contact Us</a>
+          </div>
+        </div>
+        
+        <div class="row g-4 mt-5">
+          <div class="col-md-4">
+            <div class="value-card text-center">
+              <i class="fas fa-award"></i>
+              <h4>Quality First</h4>
+              <p>We only stock products from reputable brands with proven track records.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="value-card text-center">
+              <i class="fas fa-users"></i>
+              <h4>Customer Focused</h4>
+              <p>Your satisfaction is our priority. We're here to help you find the perfect tech.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="value-card text-center">
+              <i class="fas fa-rocket"></i>
+              <h4>Innovation Driven</h4>
+              <p>We stay ahead of the curve to bring you the latest and greatest technology.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -54,8 +105,55 @@
     <section id="products" class="section-padding">
       <div class="container">
         <h2 class="section-heading">Our Products</h2>
+        <div class="row mb-5">
+          <div class="col-12">
+            <div class="product-filters text-center">
+              <button class="btn btn-outline-primary active" data-category="all">All Products</button>
+              <button class="btn btn-outline-primary" data-category="laptops">Laptops</button>
+              <button class="btn btn-outline-primary" data-category="smartphones">Smartphones</button>
+              <button class="btn btn-outline-primary" data-category="storage">Storage</button>
+              <button class="btn btn-outline-primary" data-category="accessories">Accessories</button>
+              <button class="btn btn-outline-primary" data-category="cameras">Cameras</button>
+              <button class="btn btn-outline-primary" data-category="printers">Printers</button>
+              <button class="btn btn-outline-primary" data-category="wearables">Wearables</button>
+              <button class="btn btn-outline-primary" data-category="audio">Audio</button>
+              <button class="btn btn-outline-primary" data-category="drones">Drones</button>
+              <button class="btn btn-outline-primary" data-category="gaming">Gaming</button>
+            </div>
+          </div>
+        </div>
         <div id="product-list" class="row g-4">
           <!-- Products will be dynamically loaded here -->
+        </div>
+        <div class="text-center mt-5">
+          <div class="product-stats">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="stat-item">
+                  <h3>1000+</h3>
+                  <p>Happy Customers</p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="stat-item">
+                  <h3>500+</h3>
+                  <p>Products Available</p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="stat-item">
+                  <h3>50+</h3>
+                  <p>Brands</p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="stat-item">
+                  <h3>24/7</h3>
+                  <p>Support</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -63,22 +161,98 @@
     <section id="contact" class="section-padding">
       <div class="container">
         <h2 class="section-heading">Contact Us</h2>
-        <form id="contactForm" class="mx-auto" style="max-width: 500px;">
-          <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" required />
+        <div class="row g-5">
+          <div class="col-lg-6">
+            <div class="contact-info">
+              <h3>Get in Touch</h3>
+              <p>Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+              
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h5>Address</h5>
+                  <p>123 Tech Street, Hodan Vallege,  Zoobe</p>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <h5>Phone</h5>
+                  <p>+252614395797</p>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h5>Email</h5>
+                  <p>support@electrostore.com</p>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                  <h5>Business Hours</h5>
+                  <p>sat - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" required />
+          
+          <div class="col-lg-6">
+            <form id="contactForm" class="contact-form">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="name" class="form-label">First Name *</label>
+                  <input type="text" class="form-control" id="name" required />
+                </div>
+                <div class="col-md-6">
+                  <label for="lastname" class="form-label">Last Name *</label>
+                  <input type="text" class="form-control" id="lastname" required />
+                </div>
+                <div class="col-12">
+                  <label for="email" class="form-label">Email Address *</label>
+                  <input type="email" class="form-control" id="email" required />
+                </div>
+                <div class="col-12">
+                  <label for="subject" class="form-label">Subject</label>
+                  <select class="form-select" id="subject">
+                    <option value="">Select a subject</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="support">Technical Support</option>
+                    <option value="order">Order Status</option>
+                    <option value="return">Returns & Refunds</option>
+                    <option value="partnership">Partnership</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="message" class="form-label">Message *</label>
+                  <textarea class="form-control" id="message" rows="5" required></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" id="btn2" class="btn btn-primary">Send Message</button>
+                </div>
+                <div id="formFeedback" class="col-12"></div>
+              </div>
+            </form>
           </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea class="form-control" id="message" rows="4" required></textarea>
+        </div>
+        
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="map-placeholder">
+              <h4>Find Us</h4>
+              <div class="map-container">
+                <iframe style ="padding: 1px; width: 100%;" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d63795.26603070887!2d45.308313600000005!3d2.0742144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sso!4v1753595671916!5m2!1sen!2sso" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe class="img-fluid rounded" />
+                <div class="map-overlay">
+                  <p><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Hodan Valley,  zoobe</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <button type="submit" class="btn btn-primary">Send Message</button>
-          <div id="formFeedback" class="mt-3"></div>
-        </form>
+        </div>
       </div>
     </section>
 
@@ -104,15 +278,69 @@
     </div>
 
     <footer id="footer" class="mt-5">
-      <div class="container text-center">
-        <p>© <span id="currentYear"></span> ElectroStore. All Rights Reserved.</p>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+            <h5 style="color: var(--primary-color)">
+              <i class="fas fa-bolt"></i> ElectroStore
+            </h5>
+            <p>Your one-stop shop for the latest electronics and gadgets. Quality products, great prices, and exceptional service.</p>
+            <div class="social-icons">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+            <h5>Quick Links</h5>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#products">Products</a></li>
+              <li><a href="#contact">Contact</a></li>
+            
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <h5>Customer Service</h5>
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Track Order</a></li>
+              <li><a href="#">Returns & Exchanges</a></li>
+              <li><a href="#">Shipping Info</a></li>
+         
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <h5>Newsletter</h5>
+            <p>Subscribe to get special offers and updates.</p>
+            <form class="newsletter-form">
+              <div class="input-group">
+                <input type="email" class="form-control" placeholder="Your email" />
+                <button class="btn btn-primary" type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              © <span id="currentYear"></span> ElectroStore. All Rights Reserved.
+            </div>
+            <div class="col-md-6 text-md-end">
+              <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
-
-
-
-
